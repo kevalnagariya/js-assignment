@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Question 2
+        //Destructuring Objects
+        let student = {
+            name: "Helsinki",
+            age: 24,
+            projects: {
+                diceGame: "Two player dice game using JavaScript"
+            },
+        };
+        
+
+        // We define 3 local variables
+        const { name,age, projects:{diceGame}} = student;
+        console.log(`My name is ${name}, age ${age} and i have made project like ${diceGame}.`);    
+    </script>
+    <script>
+        //Question 8
+        //Replace function expression with arrow functions in the code
+        /*
+        function ask (question, yes, no) {
+            if (confirm (question)) yes()
+            else no();
+        }
+
+        ask (
+            "Do you agree?",
+            function() {alert("You agreed. ");},
+            function() {alert("You canceled the execution. ");}
+        )
+        */
+
+        let ask = (question, yes, no) => {
+            if (confirm(question)) yes();
+            else no();
+        };
+
+        let asking = ask("Do you agree?", function() { alert("You agreed."); }, function() { alert("You canceled the execution."); });
+        
+
+    </script>
+
+</body>
+</html>

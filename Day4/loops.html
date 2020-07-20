@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Question 1
+        for (var i=1; i < 101; i++){
+            if (i % 15 == 0) console.log("FizzBuzz");
+            else if (i % 3 == 0) console.log("Fizz");
+            else if (i % 5 == 0) console.log("Buzz");
+            else console.log(i);
+        }
+        
+        //Question 3
+        let shoppingList = ['apple', 'mango','orange','banana'];
+        let shoppingBasket = []
+        shoppingBasket = shoppingList.concat(['Watermelon']);
+        console.log(shoppingBasket) ;
+
+        //Question 6
+        /*let num;
+        do {
+            num = prompt("Enter a number greater than 100?", 0);
+        } while (num <= 100 && num );
+        */
+        do{
+            var selection = parseInt(window.prompt("Enter a number greater than 100?"), 10);
+        }while(isNaN(selection) || selection <= 100 );
+
+        //Question 7
+        let n = 10;
+
+        nextPrime:
+        for (let i = 2; i <= n; i++) { // for each i...
+            for (let j = 2; j < i; j++) { // look for a divisor..
+                if (i % j == 0) continue nextPrime; // not a prime, go next i
+            }
+            alert( i ); // a prime
+        }
+
+    </script>
+</body>
+</html>
