@@ -8,9 +8,10 @@ for(var i=0; i<size; i++) {
 //Print the array in the console.
 console.log(arr);
 
-let odd = arr.filter(el=>el%3==0);
+let odd = arr.filter(el=>el%2!=0);
 
-let oddCubes = arr.filter(el=>el%3==0).map(el=>el**3);
+let oddCubes = odd.filter(el=>el%2!=0).map(el=>el**3);
+
 
 console.log(odd);
 console.log(oddCubes);
